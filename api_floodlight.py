@@ -1,4 +1,4 @@
-import httplib
+import http.client
 import json
 
 
@@ -36,27 +36,11 @@ class StaticEntryPusher(object):
         return ret
 
 
-pusher = StaticEntryPusher('<insert_controller_ip')
-
-flow1 = {
-    'switch': "00:00:00:00:00:00:00:01",
-    "name": "flow_mod_1",
-    "cookie": "0",
-    "priority": "32768",
-    "in_port": "1",
-    "active": "true",
-    "actions": "output=flood"
-}
-
-flow2 = {
-    'switch': "00:00:00:00:00:00:00:01",
-    "name": "flow_mod_2",
-    "cookie": "0",
-    "priority": "32768",
-    "in_port": "2",
-    "active": "true",
-    "actions": "output=flood"
-}
-
-pusher.set(flow1)
-pusher.set(flow2)
+pusher = StaticEntryPusher('IP')
+with open("flows.json") as file:
+    flows = json.load(file)
+print(flows)
+def short():
+    pusher.set(flow1)
+def long():
+    pusher.set(flow1)
