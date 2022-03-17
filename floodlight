@@ -1,0 +1,2 @@
+docker pull glefevre/floodlight
+docker run -d -p 6653:6653 -p 8080:8080 --name=floodlight glefevre/floodlight
