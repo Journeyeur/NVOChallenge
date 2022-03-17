@@ -2,27 +2,27 @@
     {
     "shortflow":{
         "flow1":{
-            "switch":"DPID",
+            "switch":"00:00:6e:5b:00:e0:89:41",
             "name":"short_egress",
             "priority":"500",
             "in_port":"1",
             "active":"true",
-            "instruction_apply_actions":"output=2"
+            "actions":"output=2"
 
         },
         "flow2":{
-            "switch":"DPID",
+            "switch":"00:00:26:0e:b3:c6:41:44",
             "name":"short_ingress",
             "priority":"500",
             "in_port":"2",
             "active":"true",
-            "instruction_apply_actions":"output=1"
+            "actions":"output=1"
 
         }
     },
     "longflow":{
             "flow1":{
-                "switch":"DPID",
+                "switch":"00:00:6e:5b:00:e0:89:41",
                 "name":"long_egress_1",
                 "priority":"650",
                 "in_port":"1",
@@ -30,7 +30,7 @@
                 "actions":"output=3"
                 },
                 "flow2":{
-                    "switch":"DPID",
+                    "switch":"00:00:26:0e:b3:c6:41:44",
                     "name":"long_egress_2",
                     "priority":"650",
                     "in_port":"1",
@@ -38,7 +38,7 @@
                     "actions":"output=2"
                     },
                 "flow3":{
-                    "switch":"DPID",
+                    "switch":"00:00:92:4c:e9:f3:b1:43",
                     "name":"long_egress_3",
                     "priority":"650",
                     "in_port":"3",

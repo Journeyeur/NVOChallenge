@@ -1,4 +1,4 @@
-import http.client
+import http.client as httplib
 import json
 
 
@@ -36,11 +36,21 @@ class StaticEntryPusher(object):
         return ret
 
 
-pusher = StaticEntryPusher('IP')
+pusher = StaticEntryPusher('172.17.0.5')
 with open("flows.json") as file:
     flows = json.load(file)
-print(flows)
+
 def short():
-    pusher.set(flow1)
+   pusher.set(flows['flows']['shortflow']['flow1'])
+   pusher.set(flows['flows']['shortflow']['flow2'])
+
+
 def long():
-    pusher.set(flow1)
+   pusher.set(flows['flows']['longflow']['flow1'])
+   pusher.set(flows['flows']['longflow']['flow2'])
+   pusher.set(flows['flows']['longflow']['flow3'])
+
+   # pusher.set(flow1)
+
+short()
+long()
