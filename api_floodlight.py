@@ -50,7 +50,5 @@ def long():
    pusher.set(flows['flows']['longflow']['flow2'])
    pusher.set(flows['flows']['longflow']['flow3'])
 
-   # pusher.set(flow1)
-
 short()
 long()
