@@ -1,0 +1,10 @@
+netman@netman:~$ 
+netman@netman:~$ sudo docker exec ovsswitch1 ovs-ofctl -OOpenFlow13 show ovs1|grep dpid
+OFPT_FEATURES_REPLY (OF1.3) (xid=0x2): dpid:00006e5b00e08941
+netman@netman:~$ 
+netman@netman:~$ sudo docker exec ovsswitch2 ovs-ofctl -OOpenFlow13 show ovs2|grep dpid
+OFPT_FEATURES_REPLY (OF1.3) (xid=0x2): dpid:0000260eb3c64144
+netman@netman:~$ 
+netman@netman:~$ sudo docker exec ovsswitch3 ovs-ofctl -OOpenFlow13 show ovs3|grep dpid
+OFPT_FEATURES_REPLY (OF1.3) (xid=0x2): dpid:0000924ce9f3b143
+netman@netman:~$ 
